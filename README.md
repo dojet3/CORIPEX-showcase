@@ -2,7 +2,7 @@
 
 **A curated technical window into a private, security-first research intelligence platform.**
 
-CORIPEX is a local-first research application for private document workspaces, secure intake, provenance-aware retrieval, and source-grounded research answers. The real product repository is private. This **separate public candidate** exposes selected authentic, reviewable source files, tests, architectural decisions and design evidence — without distributing the product, its credentials or operational controls.
+CORIPEX is a local-first research application for private document workspaces, secure intake, provenance-aware retrieval, and source-grounded research answers. The real product repository is private. This **independent engineering showcase** exposes selected authentic, reviewable source files, tests, architectural decisions and design evidence — without distributing the product, its credentials or operational controls.
 
 > **Evidence boundary (15 October 2026).** The Academic Edition remains in Sprint 007 execution. Product UX, WP3-DEMO and bounded AI A+B1 implementation are merged, but owner-controlled Google/account-security checks, live AI and bilingual evaluation, full WP4 research capabilities, cloud deployment and final release acceptance are **not complete**. All showcases below are examples, not a deployable product.
 
@@ -83,6 +83,8 @@ The example tests exercise the adapted UoW and evidence builder and the original
 python -m pip install -r requirements-demo.txt
 python -m pytest tests/test_public_samples.py tests/test_api_public_sample.py -q
 ```
+
+The [showcase-only CI workflow](.github/workflows/showcase-checks.yml) tests the public Python examples and validates Markdown links and Mermaid fence pairs. These are **not** the private CORIPEX integration tests; the 2,992-test figure above is a separate dated evidence snapshot.
 
 For the real TypeScript source files, the matching Vitest test is included as *reading evidence*, not as a standalone installable React package. The tests intentionally reference the React runtime in the parent application.
 
