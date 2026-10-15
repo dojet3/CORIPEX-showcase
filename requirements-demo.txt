@@ -1,0 +1,5 @@
+# Dependencies for the independent educational Python samples only.
+# Not the CORIPEX product dependency manifest.
+fastapi>=0.128,<1
+pydantic>=2.13,<3
+pytest>=9,<10
