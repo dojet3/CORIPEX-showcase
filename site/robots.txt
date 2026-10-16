@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://coripex.com/sitemap.xml
