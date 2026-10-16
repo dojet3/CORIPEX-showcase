@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="Explore four guided CORIPEX research simulations with curated public references and source-to-answer traces. No live AI calls." />
+  <title>Interactive Research Demo — CORIPEX</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="canonical" href="https://coripex.com/demo/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CORIPEX" />
+  <meta property="og:title" content="Interactive Research Demo — CORIPEX" />
+  <meta property="og:description" content="Explore four guided CORIPEX research simulations with curated public references and source-to-answer traces. No live AI calls." />
+  <meta property="og:url" content="https://coripex.com/demo/" />
+  <meta property="og:image" content="https://coripex.com/assets/coripex-social-card.jpg" />
+  <meta property="og:image:alt" content="CORIPEX — Research intelligence, grounded in your sources." />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://coripex.com/assets/coripex-social-card.jpg" />
+  <meta name="theme-color" content="#080f1e" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="../" aria-label="CORIPEX home"><span class="brand-mark" aria-hidden="true"></span>CORIPEX</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../#capabilities">Capabilities</a>
+        <a href="../#rag-engine">RAG Engine</a>
+        <a href="../#engineering">Architecture</a>
+        <a href="../#roadmap">Roadmap</a>
+        <a class="pill small outline" href="../" aria-label="Back to CORIPEX site">Back to Site ←</a>
+        <span class="login-placeholder" aria-label="Product Login — application access coming soon" title="Application access coming soon">Product Login <small>Soon</small></span>
+      </nav>
+      <details class="mobile-menu">
+        <summary aria-label="Open site navigation">Menu <span aria-hidden="true">☰</span></summary>
+        <nav class="mobile-menu-panel" aria-label="Mobile navigation">
+          <a href="../#capabilities">Capabilities</a>
+          <a href="../#rag-engine">RAG Engine</a>
+          <a href="../#engineering">Architecture</a>
+          <a href="../#roadmap">Roadmap</a>
+          <a href="../">Back to Site</a>
+          <span class="login-placeholder" aria-label="Product Login — application access coming soon">Product Login <small>Soon</small></span>
+        </nav>
+      </details>
+    </div>
+  </header>
+  <main class="container" id="main-content">
+    <section class="intro" aria-labelledby="demo-title">
+      <p class="eyebrow">Interactive demo</p>
+      <h1 id="demo-title">Explore research, <span class="shine">one source at a time.</span></h1>
+      <p>Four domains. Source-linked guided questions. Follow a predefined research answer and inspect the public references behind it.</p>
+      <div class="disclosure" role="note"><strong>INTERACTIVE SIMULATION · PREDEFINED EXAMPLES · NO LIVE AI PROCESSING</strong><br />Answers and source summaries on this page are curated examples. They are not generated from your input in real time. No documents are uploaded or sent to CORIPEX.</div>
+    </section>
+    <div class="domain-row" role="group" aria-label="Select research domain">
+      <button class="domain-button" type="button" data-domain="biology" aria-pressed="false"><strong>Biology</strong><small>Genetics &amp; DNA repair</small></button>
+      <button class="domain-button" type="button" data-domain="ai" aria-pressed="false"><strong>Artificial Intelligence</strong><small>Responsible AI design</small></button>
+      <button class="domain-button" type="button" data-domain="finance" aria-pressed="true"><strong>Finance</strong><small>Monetary policy</small></button>
+      <button class="domain-button" type="button" data-domain="legal" aria-pressed="false"><strong>Legal Research</strong><small>EU AI Act</small></button>
+    </div>
+    <div class="demo-layout">
+      <aside class="panel demo-sources" aria-labelledby="workspace-title">
+        <p class="eyebrow">Research workspace simulation</p>
+        <h2 id="workspace-title">Finance research</h2>
+        <p id="workspace-description"></p>
+        <div id="source-list" aria-live="polite"></div>
+        <p class="demo-aside-footnote">Reference selections and source summaries are curated for this demo. They do not represent an actual CORIPEX retrieval run.</p>
+      </aside>
+      <section class="panel" aria-labelledby="question-title">
+        <p class="eyebrow">Source-aware research</p>
+        <h2 id="question-title">Explore document-based questions</h2>
+        <p>Choose a curated question tied to a reference document, or enter the exact wording of a listed question. This is a scripted demonstration, not open-ended document Q&amp;A.</p>
+        <div id="question-panel">
+          <div id="suggested-questions" class="guided-questions" aria-label="Curated sample questions"></div>
+          <form id="ask-form" class="ask-input">
+            <input id="question-input" type="text" maxlength="200" aria-label="Research example question" placeholder="Type a listed question" autocomplete="off" />
+            <button type="submit">Ask</button>
+          </form>
+        </div>
+        <div class="demo-actions"><button type="button" id="insufficient-demo" class="text-action">View an insufficient-evidence example →</button></div>
+        <div id="result" role="status" aria-live="polite"><div class="placeholder has-top-gap">Select a curated question to inspect its answer and supporting source.</div></div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>© 2026 CORIPEX. Research intelligence, built on trust.</span><div><a href="../">Home</a><a href="../privacy/">Privacy</a><a href="../terms/">Terms</a><a href="mailto:info@coripex.com">Email</a></div></div><a class="social-link" href="https://www.linkedin.com/company/coripex/" target="_blank" rel="noopener noreferrer" aria-label="CORIPEX on LinkedIn">LinkedIn ↗</a></footer>
+  <script src="../content/demo-scenarios.js" defer></script>
+  <script src="../assets/demo.js" defer></script>
+</body>
+</html>
